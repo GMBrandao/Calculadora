@@ -53,23 +53,23 @@ void switchResult(int option)
             break;
 
         case 1:
-            Console.WriteLine("A soma dos números é: " + Sum(num1, num2));
+            Console.WriteLine(num1 + " + " + num2 + " = " + Sum(num1, num2));
             Console.ReadKey();
             break;
         case 2:
-            Console.WriteLine("A diferença dos números é: " + Subtraction(num1, num2));
+            Console.WriteLine(num1 + " - " + num2 + " = " + Subtraction(num1, num2));
             Console.ReadKey();
             break;
 
         case 3:
-            Console.WriteLine("A diferença dos números é: " + Multiplication(num1, num2));
+            Console.WriteLine(num1 + " x " + num2 + " = " + Multiplication(num1, num2));
             Console.ReadKey();
             break;
         case 4:
             if (Division(num1, num2) == 0)
                 Console.WriteLine("Impossível dividir por 0");
             else
-                Console.WriteLine("O quociente dos números é: " + Division(num1, num2));
+                Console.WriteLine(num1 + " + " + num2 + " = " + Division(num1, num2));
             Console.ReadKey();
             break;
         case 5:
