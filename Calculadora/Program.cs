@@ -1,15 +1,55 @@
-﻿float x, y;
+﻿double num1, num2;
+int option = 0;
 
-Console.WriteLine("Insira o primeiro número: ");
-x = float.Parse(Console.ReadLine());
+void Menu()
+{
+    Console.Clear();
+    Console.WriteLine("===== Menu =====");
+    Console.WriteLine("1 - Somar");
+    Console.WriteLine("2 - Subtrair");
+    Console.WriteLine("3 - Multiplicar");
+    Console.WriteLine("4 - Dividir");
+    Console.WriteLine("5 - Sair\n================\n");
+    option = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Insira o segundo número: ");
-y = float.Parse(Console.ReadLine());
+    switch (option)
+    {
+        default:
+            Console.WriteLine("Opção inválida");
+            Console.ReadKey();
+            break;
 
-Console.WriteLine("A soma dos números é: " + (x+y));
-Console.WriteLine("A diferença dos números é: " + (x - y));
-Console.WriteLine("O produto dos números é: " + x * y);
-if(y == 0)
-    Console.WriteLine("Impossível dividir por 0");
-else
-    Console.WriteLine("O quociente dos números é: " + (x / y));
+        case 1:
+            Console.WriteLine("A soma dos números é: " + (num1 + num2));
+            Console.ReadKey();
+            break;
+        case 2:
+            Console.WriteLine("A diferença dos números é: " + (num1 - num2));
+            Console.ReadKey();
+            break;
+
+        case 3:
+            Console.WriteLine("A diferença dos números é: " + (num1 * num2));
+            Console.ReadKey();
+            break;
+        case 4:
+            Console.WriteLine("A diferença dos números é: " + num1 / num2);
+            Console.ReadKey();
+            break;
+        case 5:
+            Console.WriteLine("Programa encerrando\nAté logo!");
+            Console.ReadKey();
+            break;
+    }
+}
+
+Console.WriteLine("Infomre o primeiro número: ");
+num1 = double.Parse(Console.ReadLine());
+
+Console.WriteLine("Infomre o segundo número: ");
+num2 = double.Parse(Console.ReadLine());
+
+while (option != 5)
+{
+    Menu();
+}
