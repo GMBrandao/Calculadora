@@ -14,29 +14,29 @@ void Menu()
     switchResult(option);
 }
 
-double Sum(double op1, double op2)
+double Sum()
 {
-    double soma = op1 + op2;
+    double soma = num1 + num2;
     return(soma);
 }
 
-double Subtraction(double op1, double op2)
+double Subtraction()
 {
-    double diff = op1 - op2;
+    double diff = num1 - num2;
     return (diff);
 }
 
-double Multiplication(double op1, double op2)
+double Multiplication()
 {
-    double product = op1 * op2;
+    double product = num1 * num2;
     return (product);
 }
 
-double Division(double op1, double op2)
+double Division()
 {
-    if (op2 != 0)
+    if (num2 != 0)
     {
-        double quotient = op1 / op2;
+        double quotient = num1 / num2;
         return (quotient);
     }
     else
@@ -53,23 +53,23 @@ void switchResult(int option)
             break;
 
         case 1:
-            Console.WriteLine(num1 + " + " + num2 + " = " + Sum(num1, num2));
+            Console.WriteLine(num1 + " + " + num2 + " = " + Sum());
             Console.ReadKey();
             break;
         case 2:
-            Console.WriteLine(num1 + " - " + num2 + " = " + Subtraction(num1, num2));
+            Console.WriteLine(num1 + " - " + num2 + " = " + Subtraction());
             Console.ReadKey();
             break;
 
         case 3:
-            Console.WriteLine(num1 + " x " + num2 + " = " + Multiplication(num1, num2));
+            Console.WriteLine(num1 + " x " + num2 + " = " + Multiplication());
             Console.ReadKey();
             break;
         case 4:
-            if (Division(num1, num2) == 0)
+            if (Division() == 0)
                 Console.WriteLine("Impossível dividir por 0");
             else
-                Console.WriteLine(num1 + " + " + num2 + " = " + Division(num1, num2));
+                Console.WriteLine(num1 + " + " + num2 + " = " + Division());
             Console.ReadKey();
             break;
         case 5:
