@@ -34,13 +34,8 @@ double Multiplication()
 
 double Division()
 {
-    if (num2 != 0)
-    {
         double quotient = num1 / num2;
         return (quotient);
-    }
-    else
-        return (0);
 }
 
 void switchResult()
@@ -49,34 +44,30 @@ void switchResult()
     {
         default:
             Console.WriteLine("Opção inválida");
-            Console.ReadKey();
             break;
 
         case 1:
             Console.WriteLine(num1 + " + " + num2 + " = " + Sum());
-            Console.ReadKey();
             break;
         case 2:
             Console.WriteLine(num1 + " - " + num2 + " = " + Subtraction());
-            Console.ReadKey();
             break;
 
         case 3:
             Console.WriteLine(num1 + " x " + num2 + " = " + Multiplication());
-            Console.ReadKey();
             break;
         case 4:
-            if (Division() == 0)
+            if (num2 == 0)
                 Console.WriteLine("Impossível dividir por 0");
             else
                 Console.WriteLine(num1 + " + " + num2 + " = " + Division());
-            Console.ReadKey();
             break;
         case 5:
             Console.WriteLine("Programa encerrando\nAté logo!");
-            Console.ReadKey();
             break;
     }
+    Console.WriteLine("Pressione qualquer tecla para continuar");
+    Console.ReadKey();
 }
 
 Console.WriteLine("Informe o primeiro número: ");
