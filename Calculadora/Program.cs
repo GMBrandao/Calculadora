@@ -11,7 +11,7 @@ void Menu()
     Console.WriteLine("4 - Dividir");
     Console.WriteLine("5 - Sair\n================");
     option = int.Parse(Console.ReadLine());
-    switchResult(option);
+    switchResult();
 }
 
 double Sum()
@@ -43,7 +43,7 @@ double Division()
         return (0);
 }
 
-void switchResult(int option)
+void switchResult()
 {
     switch (option)
     {
